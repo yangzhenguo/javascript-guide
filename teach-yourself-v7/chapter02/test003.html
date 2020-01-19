@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event</title>
+    <link rel="stylesheet" href="css/test003.css">
+</head>
+<body>
+<script>
+    with (window) {
+        addEventListener('mouseover', function (evt) {
+            console.log(evt);
+        });
+        addEventListener('mouseout', function (evt) {
+            console.log(evt);
+        });
+    }
+</script>
+</body>
+</html>
