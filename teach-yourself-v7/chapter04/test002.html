@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+<div id="msg"></div>
+<script>
+    var $msg = document.querySelector('#msg');
+    document.addEventListener('DOMContentLoaded', () => {
+        var arr = Array.from({length: 10000}, (v, i) => i);
+        // console.log(arr);
+        appendLog(arr)
+//        arr.forEach(i => appendLog(i))
+    })
+
+    function appendLog(msg) {
+        var $div = document.createElement('div');
+        if (Array.isArray(msg)) {
+            var $fragmentDiv = document.createDocumentFragment()
+            for (var m of msg) {
+                var $span = document.createElement('span')
+                $span.innerText = m
+                $span.style.padding = '0 .2em'
+                $div.appendChild($span)
+            }
+            $div.appendChild($fragmentDiv)
+        } else {
+            $div.innerText = msg
+        }
+        $msg.appendChild($div);
+    }
+</script>
+</body>
+</html>
