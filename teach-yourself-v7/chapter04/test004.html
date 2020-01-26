@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Date</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+<div id="msg"></div>
+<script>
+    var $msg = document.querySelector('#msg');
+    document.addEventListener('DOMContentLoaded', () => {
+        var mydate = new Date('October 22, 1995 10:57:22')
+        appendLog(mydate)
+    })
+
+    function appendLog(msg) {
+        var $div = document.createElement('div');
+        if (Array.isArray(msg)) {
+            var $fragmentDiv = document.createDocumentFragment()
+            for (var m of msg) {
+                var $span = document.createElement('span')
+                $span.innerText = m
+                $span.style.padding = '0 .2em'
+                $div.appendChild($span)
+            }
+            $div.appendChild($fragmentDiv)
+        } else {
+            $div.innerText = msg
+        }
+        $msg.appendChild($div);
+    }
+
+    function printDate() {
+        var date = new Date()
+        return `${date.getFullYear()}-${('00' + (date.getMonth() + 1)).slice(-2)}-${('00' + date.getDate()).slice(-2)}`
+    }
+</script>
+</body>
+</html>

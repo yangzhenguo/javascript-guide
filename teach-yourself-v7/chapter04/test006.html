@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>With</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        p {
+            font: 14px normal Arial, Verdana, Helvetica;
+        }
+    </style>
+</head>
+<body>
+<div id="msg"></div>
+<script>
+    var $msg = document.querySelector('#msg');
+    document.addEventListener('DOMContentLoaded', () => {
+        tellTime();
+    })
+
+    function appendLog(msg) {
+        var $div = document.createElement('div');
+        if (Array.isArray(msg)) {
+            var $fragmentDiv = document.createDocumentFragment()
+            for (var m of msg) {
+                var $span = document.createElement('span')
+                $span.innerText = m
+                $span.style.padding = '0 .2em'
+                $div.appendChild($span)
+            }
+            $div.appendChild($fragmentDiv)
+        } else {
+            $div.innerText = msg
+        }
+        $msg.appendChild($div);
+    }
+
+    function tellTime() {
+        var out = '';
+        var now = new Date();
+        out += '<br>Date: ' + now.getDate();
+        out += '<br>Month: ' + now.getMonth();
+        out += '<br>Year: ' + now.getYear();
+        out += '<br>Hours: ' + now.getHours();
+        out += '<br>Minutes: ' + now.getMinutes();
+        out += '<br>Seconds: ' + now.getSeconds();
+        document.getElementById('msg').innerHTML = out;
+    }
+</script>
+</body>
+</html>
