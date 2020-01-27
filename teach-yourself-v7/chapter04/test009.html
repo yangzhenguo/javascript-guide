@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Antoni Gaudí - Introduction</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+
+        }
+
+        header nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        header nav ul li {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            min-width: 120px;
+            line-height: 45px;
+        }
+
+        main {
+            display: flex;
+            flex: 1;
+        }
+
+        main article, main aside {
+            flex: 1;
+        }
+
+        main aside {
+            flex-grow: 0;
+            flex-basis: 300px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li>a</li>
+            <li>b</li>
+            <li>c</li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <article>article</article>
+    <aside>aside</aside>
+</main>
+<footer>footer</footer>
+</body>
+</html>
