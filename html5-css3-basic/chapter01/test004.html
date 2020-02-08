@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--<meta http-equiv="refresh" content="0;url=https://www.baidu.com">-->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        main > section {
+            flex: 1;
+        }
+
+        div > li:not(:last-child) {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <nav>
+        nav
+    </nav>
+    <main>
+        <aside>
+            <nav>
+                <section>section1</section>
+                <section>section2</section>
+                <section>section3</section>
+            </nav>
+        </aside>
+        <section>
+            <h1 contenteditable="true">This is my <font color=#79ff50 lang="zh-CN">第一个</font> html.</h1>
+            <div>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </div>
+        </section>
+    </main>
+    <footer>
+        footer
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function</title>
+    <script>
+        var a = 10;
+        var b = 10;
+        function showVars() {
+            var a = 20;
+            b = 30;
+            return 'Local variable "a" = ' + a + '\nGlobal variable "b" = ' + b;
+        }
+        var message = showVars();
+    </script>
+</head>
+<body>
+<div id="result"></div>
+<script>
+    document.querySelector('#result').innerText = message;
+</script>
+</body>
+</html>
