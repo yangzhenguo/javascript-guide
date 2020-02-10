@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Iterator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        html[lang|="zh"] ul > li:first-of-type {
+            color: red;
+        }
+        h2+li {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <h2>List</h2>
+    <li>list-1</li>
+    <li>list-2</li>
+    <li>list-3</li>
+</ul>
+<script>
+    class PersonList {
+        constructor(start, end) {
+            this.start = start;
+            this.end = end;
+        }
+
+        *[Symbol.iterator]() {
+            for (let i = this.start; i <= this.end; i++) {
+                yield {person: i}
+            }
+        }
+
+        forEach(func) {
+            if (typeof func === 'function') {
+                for (let p of this) {
+                    func(p)
+                }
+            }
+        }
+    }
+    let fragment = document.createDocumentFragment();
+    for (let person of new PersonList(3, 60)) {
+        let p = document.createElement('li')
+        p.appendChild(document.createTextNode(JSON.stringify(person)))
+        fragment.appendChild(p)
+    }
+    document.querySelector('ul').appendChild(fragment)
+
+    for (let [key, value] of [1, 2, 3].entries()) {
+        console.log(key, value)
+    }
+</script>
+</body>
+</html>

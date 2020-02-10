@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>inherit</title>
+    <style>
+        body {
+            color: red;
+            text-align: center;
+        }
+        article > p:first-child {
+            color: initial;
+        }
+        article > ul {
+            text-align: center;
+        }
+        article > ul {
+            color: initial;
+            text-align: unset;
+            border: 50px groove red;
+            border-style: hidden;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <article>
+        <p>first</p>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </article>
+</main>
+</body>
+</html>
