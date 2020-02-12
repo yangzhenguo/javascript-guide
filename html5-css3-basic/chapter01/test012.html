@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font: 16px/1.5 Helvetica, Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100vh;
+        }
+
+        header.header {
+            height: 75px;
+            line-height: 75px;
+        }
+
+        .center {
+            flex: 1;
+        }
+
+        aside {
+            width: 200px;
+            height: 100%;
+            float: left;
+            background-color: #baf;
+        }
+
+        main {
+            margin-left: 200px;
+            height: 100%;
+        }
+
+        main > #box1 {
+            background-color: red;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        main > #box2 {
+            background-color: blue;
+            height: 50px;
+            line-height: 50px;
+            margin-top: -25px;
+        }
+
+        main > #box3 {
+            background-color: green;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        footer {
+            height: 45px;
+            line-height: 45px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        header
+    </header>
+    <div class="center">
+        <aside>
+            aside
+        </aside>
+        <main>
+            <div id="box1">box1</div>
+            <div id="box2">box2</div>
+            <div id="box3">box3</div>
+        </main>
+    </div>
+    <footer>
+        footer
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            user-select: none;
+        }
+        header {
+            font-size: 20px;
+            width: 800px;
+            text-align: center;
+            margin: 20px auto;
+            border-radius: 3em;
+            overflow: hidden;
+        }
+        ul {
+            list-style-type: none;
+            overflow: hidden;
+        }
+
+        ul > li {
+            float: left;
+            width: 25%;
+        }
+
+        ul > li > a {
+            font: normal small-caps bolder 1em/2 Heltivica, Arial, sans-serif;
+            display: block;
+            background-color: #666;
+            transition: all .2s;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        ul > li+li > a {
+            margin-left: 2px;
+        }
+
+        ul > li > a:hover {
+            background-color: #444;
+            transition: all .2s;
+            color: #cecece;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <ul>
+        <li><a href="javascript:void(0);">Home</a></li>
+        <li><a href="javascript:void(0);">News</a></li>
+        <li><a href="javascript:void(0);">Contact</a></li>
+        <li><a href="javascript:void(0);">About</a></li>
+    </ul>
+</header>
+</body>
+</html>
