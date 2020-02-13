@@ -2,9 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <style>
+        table{
+            /*border-collapse: collapse;*/
+            border-spacing:0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            color: #444;
+        }
+        .custom_tb tr:hover{
+            background-color: #fbf8e9;
+            transition: all 0.1s ease-in-out;
+        }
+        .custom_tb th,.custom_tb td{
+            border-left: 1px solid #ccc;
+            border-top: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        .custom_tb th{
+            background-color: #dce9f9;
+            border-top:none;
+        }
+        .custom_tb td:first-child,.custom_tb th:first-child{
+            border-left: none;
+        }
+        .custom_tb th:first-child{
+            border-radius: 6px 0 0 0;
+        }
+        .custom_tb th:last-child{
+            border-radius: 0 6px 0 0;
+        }
+        .custom_tb tr:last-child td:first-child{
+            border-radius: 0 0 0 6px;
+        }
+        .custom_tb tr:last-child td:last-child{
+            border-radius: 0 0 6px 0;
+        }
+    </style>
 </head>
 <body>
-$END$
+<table class="custom_tb">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Hostname</th>
+        <th>Uid</th>
+        <th>status</th>
+    </tr>
+    </thead>
+    <tr>
+        <td>1</td>
+        <td>server1</td>
+        <td>12323342</td>
+        <td>connect</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>server2</td>
+        <td>63382913</td>
+        <td>disconnect</td>
+    </tr>
+</table>
 </body>
 </html>

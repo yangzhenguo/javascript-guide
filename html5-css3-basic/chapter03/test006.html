@@ -2,9 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <style>
+        table {
+            width: 800px;
+            margin: 10px auto;
+            text-align: center;
+            border-spacing: 0;
+        }
+
+        table tr th, table tr td {
+            border-left: solid;
+            border-top: solid;
+            line-height: 2;
+        }
+
+        table tr th {
+            background-color: deepskyblue;
+        }
+        table tr td {
+            background-color: skyblue;
+        }
+
+        table tr th:last-child, table tr td:last-child {
+            border-right: solid;
+        }
+
+        table tr:last-child td {
+            border-bottom: solid;
+        }
+
+        table tr th:first-child {
+            border-radius: 20px 0 0 0;
+        }
+
+        table tr th:last-child {
+            border-radius: 0 20px 0 0;
+        }
+
+        [dir="rtl"] table tr th:first-child {
+            border-radius: 0 20px 0 0;
+        }
+
+        [dir="rtl"] table tr th:last-child {
+            border-radius: 20px 0 0 0;
+        }
+
+        [dir="rtl"] table tr th:last-child, [dir="rtl"] table tr td:last-child {
+            border-right: none;
+        }
+
+        [dir="rtl"] table tr th:first-child, [dir="rtl"] table tr td:first-child {
+            border-right: solid;
+        }
+    </style>
 </head>
 <body>
-$END$
+<table>
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Hostname</th>
+        <th>Uid</th>
+        <th>status</th>
+    </tr>
+    </thead>
+    <tr>
+        <td>1</td>
+        <td>server1</td>
+        <td>12323342</td>
+        <td>connect</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>server2</td>
+        <td>63382913</td>
+        <td>disconnect</td>
+    </tr>
+</table>
 </body>
 </html>

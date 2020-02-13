@@ -2,9 +2,80 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 800px;
+            margin: 10px auto;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+            text-align: center;
+            line-height: 2;
+        }
+
+        table th, table td {
+            border: 1px solid;
+            width: 20%;
+        }
+
+        table th {
+            border: solid #666;
+        }
+
+        table tr th:first-child {
+            border-radius: 20px;
+        }
+
+        table td {
+            border: solid #aaa;
+        }
+
+        table td:hover {
+            background-color: #eaeaea;
+            transition: all .2s;
+            cursor: default;
+        }
+    </style>
 </head>
 <body>
-$END$
+<div class="container">
+    <table>
+        <tr>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+    </table>
+</div>
 </body>
 </html>
