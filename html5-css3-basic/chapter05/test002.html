@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .dialog {
+            position: fixed;
+            width: 600px;
+            height: 400px;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        .shadow {
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: #cccccc;
+        }
+
+        .content {
+            position: relative;
+            background-color: #fff;
+            height: 100%;
+            box-shadow: 1px 1px 10px #999;
+            border-radius: 5px;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dialog">
+        <div class="shadow"></div>
+        <div class="content">
+            content
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            min-width: 600px;
+        }
+
+        header, footer {
+            line-height: 50px;
+            text-align: center;
+        }
+
+        header {
+            background-color: yellowgreen;
+        }
+
+        footer {
+            background-color: skyblue;
+        }
+
+        main {
+            height: calc(100% - 100px);
+            min-height: 500px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        main .content,
+        main .left,
+        main .right {
+            padding-bottom: 10000px;
+            margin-bottom: -10000px!important;
+        }
+
+        main .content {
+            margin: 0 200px;
+            height: 100%;
+            overflow: auto;
+            background-color: deeppink;
+        }
+
+        main .left,
+        main .right {
+            position: absolute;
+            top: 0;
+            width: 200px;
+        }
+
+        main .left {
+            left: 0;
+            background-color: pink;
+        }
+        main .right {
+            right: 0;
+            background-color: hotpink;
+        }
+    </style>
+</head>
+<body>
+<header>header</header>
+<main>
+    <div class="content">
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+    </div>
+    <aside class="left">left</aside>
+    <aside class="right">right</aside>
+</main>
+<footer>footer</footer>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        input {
+            display: block;
+        }
+        .avatar-box {
+            width: 3em;
+            margin: 10px auto;
+        }
+        .avatar {
+            background-color: pink;
+            border-radius: 30%;
+            padding-top: 100%;
+        }
+    </style>
+</head>
+<body>
+    <input id="range" type="range" min="1" max="50" value="1" oninput="changeHandler()" style="margin: 0 auto;">
+    <div class="avatar-box">
+        <div class="avatar"></div>
+    </div>
+
+    <script>
+        let box = document.querySelector('.avatar-box');
+
+        window.addEventListener('DOMContentLoaded', () => {
+            changeHandler()
+        })
+
+        function changeHandler() {
+            let range = window.range.value
+            box.style.width = `${range}em`
+        }
+    </script>
+</body>
+</html>
